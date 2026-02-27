@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #6a040f;
+  font-family: "XBNiloofarRegular", sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+  min-height: 300vh;
+  overflow-x: hidden;
+  transition: background 1.2s ease-in-out;
+}
+
+.banner {
+  width: 100%;
+  height: 70px;
+  background-image: url("images/banner.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+}
+
+nav {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  background: #03071e;
+  transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links:hover {
+  color: #ffffff;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links {
+  color: #d00000;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+body.scrolled {
+  background: #03071e;
+}
+
+nav.scrolled {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background: #ffba08; /*I don't know if i want to keep this but it seems like it has potential for somethinf cool */
+}
