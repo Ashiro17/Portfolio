@@ -8,9 +8,15 @@ body {
   font-family: "XBNiloofarRegular", sans-serif;
   color: #ffffff;
   line-height: 1.6;
-  min-height: 300vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
   transition: background 1.2s ease-in-out;
+}
+
+main {
+  flex: 1;
 }
 
 .banner {
@@ -34,7 +40,7 @@ nav {
   right: 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 1rem 3rem;
@@ -47,33 +53,27 @@ nav {
   gap: 2rem;
 }
 
-.nav-links:hover {
-  color: #ffffff;
-  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .nav-links {
   color: #d00000;
   text-decoration: none;
   font-size: 1.2rem;
 }
+
+.nav-links:hover {
+  color: #ffffff;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body.scrolled {
-  background: #03071e;
+  background: #03071e; /* fades to dark blue when nav turns yellow */
 }
 
 nav.scrolled {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  background: #ffba08; /*I don't know if i want to keep this but it seems like it has potential for somethinf cool */
+  background: #ffba08;
 }
 
-/* ==================== NEW STYLES ADDED FOR YOU ==================== */
-
-/* Center nav links perfectly */
-nav {
-  justify-content: center;
-}
-
-/* Highlight current page */
+/* Nav links*/
 .nav-links.active {
   color: #ffffff;
   font-weight: 600;
@@ -91,27 +91,24 @@ nav {
   background: #ffba08;
 }
 
-/* Hero */
+/* Hero/About Me */
 .hero {
-  padding: 160px 3rem 80px;
+  padding: 180px 3rem 40px;
   text-align: center;
-  background: #03071e;
 }
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #ffba08;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 .hero p {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 0;
 }
 
-/* About Me Section */
 .about-section {
   padding: 80px 3rem;
-  background: #03071e;
   text-align: center;
 }
 .about-container {
@@ -128,11 +125,13 @@ nav {
   max-width: 700px;
   margin: 0 auto 2rem;
 }
+
+/* ==================== SKILLS GRID - GAP ADDED ==================== */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  margin: 3rem 0;
+  margin: 3rem 0 5rem 0;   /* ← extra 2rem bottom gap before resume button */
 }
 .skill-item {
   background: #6a040f;

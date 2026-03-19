@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Body scroll effect
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 150) {
+  if (window.scrollY > 30) {
     document.body.classList.add("scrolled");
   } else {
     document.body.classList.remove("scrolled");
