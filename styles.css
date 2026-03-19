@@ -91,6 +91,10 @@ nav.scrolled {
   background: #ffba08;
 }
 
+nav.scrolled .nav-links.active::after {
+  background: #d00000;    
+}
+
 /* Hero/About Me */
 .hero {
   padding: 180px 3rem 40px;
