@@ -126,12 +126,11 @@ nav.scrolled {
   margin: 0 auto 2rem;
 }
 
-/* ==================== SKILLS GRID - GAP ADDED ==================== */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  margin: 3rem 0 5rem 0;   /* ← extra 2rem bottom gap before resume button */
+  margin: 3rem 0 5rem 0;  
 }
 .skill-item {
   background: #6a040f;
@@ -183,4 +182,74 @@ footer {
 footer p {
   opacity: 0.8;
   font-size: 1rem;
+}
+
+/* hopefully it works */
+@media (max-width: 1024px) {
+  nav {
+    padding: 1rem 2rem;  
+  }
+  
+  .nav-container {
+    gap: 1.2rem;
+  }
+  
+  .nav-links {
+    font-size: 1.05rem;      
+  }
+
+  .hero {
+    padding: 140px 2rem 30px;   
+  }
+  
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+  
+  .hero p {
+    font-size: 1.15rem;
+  }
+
+  .about-section {
+    padding: 60px 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    margin: 3rem 0 4rem 0;      
+  }
+
+  .resume-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}
+
+/* Phones (smaller than tablet) */
+@media (max-width: 767px) {
+  .nav-container {
+    flex-direction: column;   
+    gap: 0.8rem;
+  }
+  
+  .nav-links {
+    font-size: 1.1rem;
+    padding: 0.4rem 0;
+  }
+
+  .hero {
+    padding: 120px 1.5rem 25px;
+  }
+  
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;   
+  }
 }
