@@ -156,7 +156,7 @@ nav.scrolled .nav-links.active::after {
   transition: 0.3s;
 }
 .resume-btn:hover {
-  background: #ffffff;
+  background: #d00000;
   transform: scale(1.05);
 }
 
