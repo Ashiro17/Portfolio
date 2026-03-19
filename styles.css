@@ -19,11 +19,12 @@ main {
   flex: 1;
 }
 
+/* ==================== BANNER - FIXED FOR ALL DEVICES ==================== */
 .banner {
   width: 100%;
-  height: 70px;
+  height: 70px;                    /* desktop */
   background-image: url("images/banner.png");
-  background-size: 100% auto;
+  background-size: cover;          /* fills the entire area - no gaps */
   background-position: center;
   background-repeat: no-repeat;
   position: fixed;
@@ -35,7 +36,7 @@ main {
 
 nav {
   position: fixed;
-  top: 70px;
+  top: 70px;                       /* matches banner height */
   left: 0;
   right: 0;
   z-index: 1000;
@@ -65,7 +66,7 @@ nav {
 }
 
 body.scrolled {
-  background: #03071e; /* fades to dark blue when nav turns yellow */
+  background: #03071e;
 }
 
 nav.scrolled {
@@ -73,7 +74,7 @@ nav.scrolled {
   background: #ffba08;
 }
 
-/* Nav links*/
+/* Nav links - active highlight */
 .nav-links.active {
   color: #ffffff;
   font-weight: 600;
@@ -90,9 +91,8 @@ nav.scrolled {
   height: 3px;
   background: #ffba08;
 }
-
 nav.scrolled .nav-links.active::after {
-  background: #d00000;    
+  background: #d00000;   /* turns red when nav is yellow */
 }
 
 /* Hero/About Me */
@@ -134,7 +134,7 @@ nav.scrolled .nav-links.active::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  margin: 3rem 0 5rem 0;  
+  margin: 3rem 0 5rem 0;
 }
 .skill-item {
   background: #6a040f;
@@ -188,10 +188,15 @@ footer p {
   font-size: 1rem;
 }
 
-/* hopefully it works */
+/* ==================== TABLET & MOBILE - BANNER & NAV FIXED ==================== */
+/* Tablets (iPad, etc.) */
 @media (max-width: 1024px) {
+  .banner {
+    height: 60px;
+  }
   nav {
-    padding: 1rem 2rem;  
+    top: 60px;          /* sits perfectly under banner */
+    padding: 1rem 2rem;
   }
   
   .nav-container {
@@ -199,20 +204,14 @@ footer p {
   }
   
   .nav-links {
-    font-size: 1.05rem;      
+    font-size: 1.05rem;
   }
 
   .hero {
-    padding: 140px 2rem 30px;   
+    padding: 140px 2rem 30px;
   }
-  
-  .hero h1 {
-    font-size: 2.7rem;
-  }
-  
-  .hero p {
-    font-size: 1.15rem;
-  }
+  .hero h1 { font-size: 2.7rem; }
+  .hero p { font-size: 1.15rem; }
 
   .about-section {
     padding: 60px 2rem;
@@ -220,7 +219,7 @@ footer p {
 
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    margin: 3rem 0 4rem 0;      
+    margin: 3rem 0 4rem 0;
   }
 
   .resume-btn {
@@ -229,10 +228,17 @@ footer p {
   }
 }
 
-/* Phones (smaller than tablet) */
+/* Phones */
 @media (max-width: 767px) {
+  .banner {
+    height: 50px;
+  }
+  nav {
+    top: 50px;          /* sits perfectly under banner */
+  }
+
   .nav-container {
-    flex-direction: column;   
+    flex-direction: column;
     gap: 0.8rem;
   }
   
@@ -244,16 +250,10 @@ footer p {
   .hero {
     padding: 120px 1.5rem 25px;
   }
-  
-  .hero h1 {
-    font-size: 2.4rem;
-  }
-  
-  .hero p {
-    font-size: 1.1rem;
-  }
+  .hero h1 { font-size: 2.4rem; }
+  .hero p { font-size: 1.1rem; }
 
   .skills-grid {
-    grid-template-columns: 1fr;   
+    grid-template-columns: 1fr;
   }
 }
