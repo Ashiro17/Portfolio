@@ -54,7 +54,7 @@ nav {
 }
 
 .nav-links {
-  color: #d00000;
+  color: #E85d04;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -91,7 +91,7 @@ nav.scrolled {
   background: #ffba08;
 }
 nav.scrolled .nav-links.active::after {
-  background: #d00000;   
+  background: #E85d04;   
 }
 
 /* Hero/About Me */
@@ -174,7 +174,7 @@ footer {
   margin: 1.5rem 0;
 }
 .footer-links a {
-  color: #d00000;
+  color: #E85d04;
   text-decoration: none;
   margin: 0 1rem;
   font-size: 1.1rem;
