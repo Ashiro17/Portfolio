@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asia Allen's Portfolio</title>
+    <title>Art — Asia Allen</title>
     <link rel="preconnect" href="https://fontlibrary.org" />
     <link rel="stylesheet" href="https://fontlibrary.org//face/xb-niloofar" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
+    <a href="index.html" class="banner" aria-label="Go to homepage"></a>
+
     <nav>
-      <div class="banner"></div>
       <div class="nav-container">
-        <a class="nav-links" href="art.html">Art</a>
+        <a class="nav-links active" href="art.html">Art</a>
         <a class="nav-links" href="index.html">Home Page</a>
         <a class="nav-links" href="projects.html">Projects</a>
         <a class="nav-links" href="roadmap.html">Roadmap</a>
@@ -21,13 +23,102 @@
     </nav>
 
     <main>
-      <section>
+      <section class="gallery-section">
+
+        <div class="gallery-hero">
+          <h1>Gallery</h1>
+          <div class="section-divider"></div>
+          <p>A collection of original works — exploring emotion, form, and color.</p>
+        </div>
+
+        <div class="gallery-filters">
+          <button class="filter-btn active" onclick="filterGallery(this,'all')">All Works</button>
+          <button class="filter-btn" onclick="filterGallery(this,'digital')">Digital</button>
+          <button class="filter-btn" onclick="filterGallery(this,'traditional')">Traditional</button>
+          <button class="filter-btn" onclick="filterGallery(this,'illustration')">Illustration</button>
+          <button class="filter-btn" onclick="filterGallery(this,'other')">Other</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+
+          <div class="art-card" data-cat="digital">
+            <img class="img-real" src="images/your-image-1.jpg" alt="Artwork title" />
+            <div class="corner-bracket"></div>
+            <div class="corner-bracket-bl"></div>
+            <div class="art-overlay">
+              <h3>Artwork Title</h3>
+              <p>Medium · Year</p>
+              <span class="art-tag">Digital</span>
+            </div>
+          </div>
+
+          <div class="art-card" data-cat="traditional">
+            <img class="img-real" src="images/your-image-2.jpg" alt="Artwork title" />
+            <div class="corner-bracket"></div>
+            <div class="corner-bracket-bl"></div>
+            <div class="art-overlay">
+              <h3>Artwork Title</h3>
+              <p>Medium · Year</p>
+              <span class="art-tag">Traditional</span>
+            </div>
+          </div>
+
+          <div class="art-card" data-cat="illustration">
+            <img class="img-real" src="images/your-image-3.jpg" alt="Artwork title" />
+            <div class="corner-bracket"></div>
+            <div class="corner-bracket-bl"></div>
+            <div class="art-overlay">
+              <h3>Artwork Title</h3>
+              <p>Medium · Year</p>
+              <span class="art-tag">Illustration</span>
+            </div>
+          </div>
+
+          <div class="art-card" data-cat="digital">
+            <img class="img-real" src="images/your-image-4.jpg" alt="Artwork title" />
+            <div class="corner-bracket"></div>
+            <div class="corner-bracket-bl"></div>
+            <div class="art-overlay">
+              <h3>Artwork Title</h3>
+              <p>Medium · Year</p>
+              <span class="art-tag">Digital</span>
+            </div>
+          </div>
+
+          <div class="art-card" data-cat="other">
+            <img class="img-real" src="images/your-image-5.jpg" alt="Artwork title" />
+            <div class="corner-bracket"></div>
+            <div class="corner-bracket-bl"></div>
+            <div class="art-overlay">
+              <h3>Artwork Title</h3>
+              <p>Medium · Year</p>
+              <span class="art-tag">Other</span>
+            </div>
+          </div>
+
+          <div class="art-card" data-cat="illustration">
+            <img class="img-real" src="images/your-image-6.jpg" alt="Artwork title" />
+            <div class="corner-bracket"></div>
+            <div class="corner-bracket-bl"></div>
+            <div class="art-overlay">
+              <h3>Artwork Title</h3>
+              <p>Medium · Year</p>
+              <span class="art-tag">Illustration</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="gallery-cta">
+          <button class="view-more-btn">View More</button>
+        </div>
+
       </section>
     </main>
 
     <footer>
       <div class="footer-container">
-        <p> © 2026 Asia Allen. All Rights Reserved.</p>
+        <p>© 2026 Asia Allen. All Rights Reserved.</p>
         <div class="footer-links">
           <a href="index.html">Home Page</a>
           <a href="projects.html">Projects</a>
@@ -37,6 +128,17 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function filterGallery(btn, cat) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.art-card').forEach(card => {
+          const show = cat === 'all' || card.dataset.cat === cat;
+          card.style.display = show ? '' : 'none';
+        });
+      }
+    </script>
 
     <script src="js/ui.js" defer></script>
   </body>

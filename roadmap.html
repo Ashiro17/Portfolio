@@ -1,33 +1,115 @@
+Roadmap · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asia Allen's Portfolio</title>
+    <title>Roadmap | Asia Allen's Portfolio</title>
     <link rel="preconnect" href="https://fontlibrary.org" />
     <link rel="stylesheet" href="https://fontlibrary.org//face/xb-niloofar" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="roadmap.css" />
   </head>
   <body>
+    <a href="index.html" class="banner" aria-label="Go to homepage"></a>
     <nav>
-      <div class="banner"></div>
       <div class="nav-container">
-        <a class="nav-links" href="roadmap.html">Roadmap</a>
+        <a class="nav-links active" href="roadmap.html">Roadmap</a>
         <a class="nav-links" href="index.html">Home Page</a>
         <a class="nav-links" href="projects.html">Projects</a>
         <a class="nav-links" href="art.html">Art</a>
         <a class="nav-links" href="files/Asia Allen.pdf" target="_blank">Resume ↓</a>
       </div>
     </nav>
-
+ 
     <main>
-      <section>
+      <section class="rm-hero">
+        <h1>My Roadmap</h1>
+        <p>Where I've been, where I am, and where I'm going.</p>
+      </section>
+ 
+      <div class="rm-progress-wrap">
+        <div class="rm-progress-track">
+          <div class="rm-progress-fill" id="rm-fill"></div>
+          <div class="rm-progress-thumb" id="rm-thumb"></div>
+        </div>
+        <div class="rm-progress-labels">
+          <span>Start</span>
+          <span id="rm-pct">0%</span>
+          <span>Now</span>
+        </div>
+      </div>
+ 
+      <section class="rm-timeline-wrap" id="rm-wrap">
+        <div class="rm-timeline" id="rm-timeline">
+ 
+          <div class="rm-spine">
+            <div class="rm-spine-fill" id="rm-spine-fill"></div>
+          </div>
+ 
+          <div class="rm-milestone" data-index="0">
+            <div class="rm-node">
+              <div class="rm-dot"></div>
+              <div class="rm-pulse"></div>
+            </div>
+            <div class="rm-card rm-card--top">
+              <span class="rm-date" contenteditable="true">2022</span>
+              <h2 class="rm-title" contenteditable="true">Started Learning to Code</h2>
+              <p class="rm-desc" contenteditable="true">Picked up HTML, CSS, and Python through self-study and coursework. Built my first small projects.</p>
+              <span class="rm-badge rm-badge--done">Done</span>
+            </div>
+          </div>
+ 
+          <div class="rm-milestone" data-index="1">
+            <div class="rm-node">
+              <div class="rm-dot"></div>
+              <div class="rm-pulse"></div>
+            </div>
+            <div class="rm-card rm-card--bottom">
+              <span class="rm-date" contenteditable="true">2023</span>
+              <h2 class="rm-title" contenteditable="true">First Real Projects</h2>
+              <p class="rm-desc" contenteditable="true">Completed meaningful projects, contributed to open source, and built out this portfolio.</p>
+              <span class="rm-badge rm-badge--done">Done</span>
+            </div>
+          </div>
+ 
+          <div class="rm-milestone" data-index="2">
+            <div class="rm-node">
+              <div class="rm-dot"></div>
+              <div class="rm-pulse"></div>
+            </div>
+            <div class="rm-card rm-card--top">
+              <span class="rm-date" contenteditable="true">2024 – 2025</span>
+              <h2 class="rm-title" contenteditable="true">Deepening Skills</h2>
+              <p class="rm-desc" contenteditable="true">Diving deeper into full-stack development, UI design, and building things I'm proud of.</p>
+              <span class="rm-badge rm-badge--active">In Progress</span>
+            </div>
+          </div>
+ 
+          <div class="rm-milestone" data-index="3">
+            <div class="rm-node">
+              <div class="rm-dot"></div>
+              <div class="rm-pulse"></div>
+            </div>
+            <div class="rm-card rm-card--bottom">
+              <span class="rm-date" contenteditable="true">2026</span>
+              <h2 class="rm-title" contenteditable="true">Land My First Role</h2>
+              <p class="rm-desc" contenteditable="true">Secure a full-time position as a developer or designer and keep growing from day one.</p>
+              <span class="rm-badge rm-badge--upcoming">Upcoming</span>
+            </div>
+          </div>
+ 
+        </div>
+ 
+        <p class="rm-hint">← Move your mouse across the timeline to explore →</p>
       </section>
     </main>
-
+ 
     <footer>
       <div class="footer-container">
-        <p> © 2026 Asia Allen. All Rights Reserved.</p>
+        <p>© 2026 Asia Allen. All Rights Reserved.</p>
         <div class="footer-links">
           <a href="index.html">Home Page</a>
           <a href="projects.html">Projects</a>
@@ -37,7 +119,8 @@
         </div>
       </div>
     </footer>
-
+ 
     <script src="js/ui.js" defer></script>
+    <script src="roadmap.js" defer></script>
   </body>
 </html>
