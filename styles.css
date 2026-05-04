@@ -302,27 +302,10 @@ footer p {
 }
 
 /* PROJECTS PAGE */
-.projects-hero {
-  padding: 180px 3rem 60px;
-  text-align: center;
-  background: #1a0f1f;           /* Changed color so it doesn't blend with nav */
-}
 
-.projects-hero h1 {
-  font-size: 3.5rem;
-  color: #ffba08;
-  margin-bottom: 1rem;
-}
-
-.projects-hero p {
-  font-size: 1.3rem;
-  max-width: 700px;
-  margin: 0 auto;
-  opacity: 0.9;
-}
 
 .projects-grid {
-  padding: 40px 3rem 80px;
+  padding: 180px 6rem 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);   /* Forces 3 boxes per row */
   gap: 2rem;
@@ -330,19 +313,19 @@ footer p {
   margin: 0 auto;
 }
 
-/* Project Card */
 .project-card {
-  background: #03071e;
+  background: #220d14;           /* Stronger contrast */
+  border: 2px solid #6a040f;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
   transition: all 0.4s ease;
-  border: 1px solid rgba(255, 186, 8, 0.1);
 }
 
 .project-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(255, 186, 8, 0.2);
+  transform: translateY(-15px);
+  border-color: #ffba08;
+  box-shadow: 0 25px 50px rgba(255, 186, 8, 0.2);
 }
 
 .project-image {
@@ -415,10 +398,6 @@ footer p {
     grid-template-columns: 1fr;   /* 1 column on mobile */
   }
 }
-
-dmap · CSS
-Copy
-
 /* roadmap.css — no JS required */
  
 .rm-hero {
